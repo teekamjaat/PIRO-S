@@ -26,10 +26,10 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 USERNAME = environ.get('USERNAME', 'https://telegram.me/XAYOONARA')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002339199841'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001983152794').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Shukla:next100cr@clustershukla.kdx8h.mongodb.net/?retryWrites=true&w=majority&appName=clustershukla")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://teekam9079:teekam@teekam.cludf.mongodb.net/?retryWrites=true&w=majority&appName=Teekam")
-DATABASE_NAME = environ.get('DATABASE_NAME', "shukla")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Next')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://xayon:xayonKEYNOrMeZS@cluster0.8baso.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://xayon:xayonOE1c91KmMt@cluster0.rb5j4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "xayon")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Piro')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002339199841'))
 QR_CODE = environ.get('QR_CODE', 'https://envs.sh/hNt.jpg')
 
