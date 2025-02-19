@@ -52,9 +52,7 @@ User - {}"""
 ❗️ ʟᴀɴɢᴜᴀɢᴇ - {languages}</b>
 """
 
-    FILE_CAPTION = """<b><a href=https://telegram.me/RahulReviewsYT>{file_name} </a></b>
-
-<i>ᴘʟᴇᴀsᴇ ꜰᴏʀᴡᴀʀᴅ ᴛʜɪs ꜰɪʟᴇs ᴛᴏ ᴛʜᴇ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇ ᴀɴᴅ ᴄʟᴏsᴇ ᴛʜɪs ᴍᴇssᴀɢᴇ</i>"""
+    FILE_CAPTION = """<b>🏷 Tɪᴛʟᴇ :</b><pre><b><i>{file_name}</i></b></pre>\n\n<blockquote><b>📢 Jᴏɪɴ </b></blockquote>: <b>@CINBox</b> ❤️‍🔥\n\n<blockquote><b><i><a href='https://t.me/+mzhkyZUCrhJhZjA1'>Mᴜꜱᴛ Jᴏɪɴ Dᴇᴀʟꜱ Cʜᴀɴɴᴇʟ.🏴‍☠️</a></i></b></blockquote>""" 
 
     RESTART_TXT = """<b>
 📅 Dᴀᴛᴇ : <code>{}</code>
