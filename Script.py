@@ -102,7 +102,7 @@ User - {}"""
 •─────•─────────•─────•
 
 
-✨ ᴜᴘɪ ɪᴅ - <code>RahulReviews@UPI</code>
+✨ ᴜᴘɪ ɪᴅ - <code>teekam4334@okaxis</code>
 
 ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ  /myplan
 
