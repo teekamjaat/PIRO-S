@@ -24,22 +24,22 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '6934463912:AAECosBwdbFiB1GeKoLqA-3-sOkmu4-mxts')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5837099475 6072084083 5725179405 5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002339199841'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001983152794 -1001756564118 -1002369988753').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://teekam9079:teekam@teekam.iz7qm.mongodb.net/?retryWrites=true&w=majority&appName=Teekam")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://teekam_jaat:9571404334@teekam.dwrhczx.mongodb.net/?retryWrites=true&w=majority&appName=Teekam")
 DATABASE_NAME = environ.get('DATABASE_NAME', "tjbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'tjbotdatabase')
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002339199841'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001786924542'))
 QR_CODE = environ.get('QR_CODE', 'https://envs.sh/hNt.jpg')
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002339199841'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001786924542'))
 URL = environ.get('URL', '')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002339199841'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001786924542'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7")
