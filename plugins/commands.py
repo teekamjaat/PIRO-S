@@ -161,7 +161,7 @@ async def start(client:Client, message):
             else:
                 rahul = settings.get('tutorial_two', TUTORIAL2) if is_second_shortener else settings.get('tutorial', TUTORIAL)
             buttons = [[
-                InlineKeyboardButton(text="✅️ ᴠᴇʀɪꜰʏ ✅️", url=verify),
+                InlineKeyboardButton(text="🚸 ᴠᴇʀɪꜰʏ 🚸", url=verify),
                 InlineKeyboardButton(text="❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪꜰʏ ❓", url=rahul)
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
@@ -197,7 +197,7 @@ async def start(client:Client, message):
                 file_caption=file.caption
             )
             btn=[[
-                InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 👀 / ꜰᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f'stream#{file.file_id}')
+                InlineKeyboardButton('🎸 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🎸', url=f'https://t.me/CINBox')
             ]]
             dlt=await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -251,7 +251,7 @@ async def start(client:Client, message):
         file_caption=files.caption
     )
     btn = [[
-        InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 👀 / ꜰᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f'stream#{file_id}')
+        InlineKeyboardButton('🎸 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🎸', url=f'https://t.me/CINBox')
     ]]
     d=await client.send_cached_media(
         chat_id=message.from_user.id,
