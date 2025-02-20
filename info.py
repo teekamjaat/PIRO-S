@@ -22,10 +22,10 @@ SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '17015225'))
 API_HASH = environ.get('API_HASH', '9431d9291adf95e14e70972ab13c7bc7')
 BOT_TOKEN = environ.get('BOT_TOKEN', '7735738156:AAEl1D84CmiBgk1fwpgsjQbaAFi3Efmu6Z8')
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5837099475 6072084083 5725179405').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5837099475 6072084083 5725179405 5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/XAYOONARA')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002339199841'))
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001983152794').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001983152794 -1001756564118 -1002369988753').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://xayon:xayonKEYNOrMeZS@cluster0.8baso.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://xayon:xayonOE1c91KmMt@cluster0.rb5j4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "xayon")
@@ -46,8 +46,8 @@ TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/45a270fc6a0a1c183c614.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "86b2818c135d6d77b744e23e52f5e647efc3ebc1")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "indiaearnx.com")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "86b2818c135d6d77b744e23e52f5e647efc3ebc1")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "indiaearnx.com")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "563704432490b9a58e574bbfb3585449420c2e2d")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "modijiurl.com")
 SHORTENER_API3 = environ.get("SHORTENER_API3", "86b2818c135d6d77b744e23e52f5e647efc3ebc1")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "indiaearnx.com")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "3600"))
