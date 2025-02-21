@@ -21,7 +21,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', ''))
 API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6934463912:AAECosBwdbFiB1GeKoLqA-3-sOkmu4-mxts')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
