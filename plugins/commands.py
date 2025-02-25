@@ -758,7 +758,7 @@ async def donation(bot, message):
 import random
 
 # Define a global PICS variable
-PICS = ["https://example.com/welcome1.jpg", "https://example.com/welcome2.jpg"]
+PICS = ["https://envs.sh/tye.jpg", "https://envs.sh/tye.jpg"]
 
 @bot.on_message(filters.command("start"))
 async def start_command(client, message):
