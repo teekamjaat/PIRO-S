@@ -749,3 +749,19 @@ async def donation(bot, message):
     await asyncio.sleep(300)
     await yt.delete()
     await message.delete()
+
+# ==== OLD CODE START ====
+# (Your existing commands.py code remains here)
+# ==== OLD CODE END ====
+
+# ==== MODIFIED CODE START ====
+import random
+
+# Define a global PICS variable
+PICS = ["https://example.com/welcome1.jpg", "https://example.com/welcome2.jpg"]
+
+@bot.on_message(filters.command("start"))
+async def start_command(client, message):
+    pic_url = random.choice(PICS)  # Pick a random welcome image
+    await message.reply_photo(photo=pic_url, caption="👋 Welcome to the bot!")
+# ==== MODIFIED CODE END ====
