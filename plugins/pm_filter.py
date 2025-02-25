@@ -787,3 +787,13 @@ async def advantage_spell_chok(message):
         await message.delete()
     except:
         pass
+
+
+# ==== OLD CODE START ====
+# (Your existing pm_filter.py code remains here)
+# ==== OLD CODE END ====
+
+# ==== MODIFIED CODE START ====
+# Removed manual filters
+# This file previously handled manual filters. They are now disabled.
+# ==== MODIFIED CODE END ====
