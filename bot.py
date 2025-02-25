@@ -102,3 +102,26 @@ class Bot(Client):
 
 app = Bot()
 app.run()
+
+
+# ==== OLD CODE START ====
+# (Your existing bot.py code remains here)
+# ==== OLD CODE END ====
+
+# ==== MODIFIED CODE START ====
+# URL Shortener Verification - Two-Time Check
+def verify_shortened_url(url):
+    verified_once = shortener_api.verify(url)  # First verification
+    if verified_once:
+        verified_twice = shortener_api.verify(url)  # Second verification
+        return verified_twice
+    return False
+
+@bot.on_message(filters.text & filters.private)
+async def url_verification(client, message):
+    if is_url(message.text):
+        if verify_shortened_url(message.text):
+            await message.reply("✅ Link verified successfully.")
+        else:
+            await message.reply("❌ Link verification failed. Please try again.")
+# ==== MODIFIED CODE END ====
