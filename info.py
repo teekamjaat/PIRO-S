@@ -19,8 +19,8 @@ def is_enabled(value, default):
 
 #main variables
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '22349465'))
+API_HASH = environ.get('API_HASH', '3732e079c4125690226d8e7b4e028ca4')
 BOT_TOKEN = environ.get('BOT_TOKEN', '6934463912:AAECosBwdbFiB1GeKoLqA-3-sOkmu4-mxts')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
@@ -58,7 +58,7 @@ LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
 auth_channel = environ.get('AUTH_CHANNEL', '-1002273359017')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001786924542'))
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002001530907'))
 
 # bot settings
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
