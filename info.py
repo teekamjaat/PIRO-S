@@ -40,9 +40,9 @@ URL = environ.get('URL', '')
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001786924542'))
-TUTORIAL = environ.get("TUTORIAL", "https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr")
-TUTORIAL2 = environ.get("TUTORIAL2", "https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr")
-TUTORIAL3 = environ.get("TUTORIAL3", "https://youtube.com/shorts/CGPakWREEeQ?si=AQQdyWnbRg78NEKr")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_Movie_Video/7")
+TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/How_To_Download_Movie_Video/7")
+TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/45a270fc6a0a1c183c614.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "3ca9e6d453fa647f7dea5916f50519819919f62a")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "indiaearnx.com")
@@ -50,7 +50,7 @@ SHORTENER_API2 = environ.get("SHORTENER_API2", "caa6a48f69b08a00a8e18f5a28c5250f
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "anylinks.in")
 SHORTENER_API3 = environ.get("SHORTENER_API3", "3ca9e6d453fa647f7dea5916f50519819919f62a")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "indiaearnx.com")
-TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "3600"))
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "375600"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "3600"))
 
 # languages search
