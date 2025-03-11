@@ -56,8 +56,8 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "3600"))
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002273359017')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+auth_channels = environ.get('AUTH_CHANNELS', 'https://t.me/TJ_BOTS,https://t.me/+MpTQZpaAKoc2ZTll')
+AUTH_CHANNELS = [ch.strip() for ch in auth_channels.split(',')]
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001786924542'))
 
 # bot settings
