@@ -133,6 +133,8 @@ async def start(client:Client, message):
         invite_link = await client.create_chat_invite_link(channel)
         btn = [[
                 InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link.invite_link)
+                ],[
+            InlineKeyboardButton('⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️', url='https://t.me/+MpTQZpaAKoc2ZTll')
         ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
