@@ -1,22 +1,35 @@
+import os
+import threading
 import requests
 import re
-import os
 from datetime import datetime, timedelta
+from flask import Flask
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Environment Variables
 API_ID = int(os.getenv("API_ID", "22349465"))  # Replace with your API ID
 API_HASH = os.getenv("API_HASH", "3732e079c4125690226d8e7b4e028ca4")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8112458164:AAHKTr_OO2zPFoiAZuaS7YnNzmA0444z-kg")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "your-bot-token")
 FSUB_CHANNEL = os.getenv("FSUB_CHANNEL", "@tj_bots")
 URL_SHORTENER = "https://indiaearnx.com/st?api=3ca9e6d453fa647f7dea5916f50519819919f62a"  # Replace with your URL shortener API
 ADMIN_ID = int(os.getenv("ADMIN_ID", "5469498838"))  # Replace with your Telegram user ID
 
 # Initialize Pyrogram Client
-app = Client("TeraboxBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+app_bot = Client("TeraboxBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-# Database for user tracking
+# Flask App for Health Check
+flask_app = Flask(__name__)
+
+@flask_app.route("/")
+def home():
+    return "OK"
+
+def run_flask():
+    port = int(os.getenv("PORT", 5000))  # Use Koyeb's assigned port
+    flask_app.run(host="0.0.0.0", port=port)
+
+# User Tracking Database
 user_downloads = {}
 premium_users = {}
 
@@ -54,7 +67,8 @@ def get_terabox_video_link(url):
             return match.group(0)  # Return direct video link
     return None
 
-@app.on_message(filters.command("start"))
+# Telegram Bot Handlers
+@app_bot.on_message(filters.command("start"))
 def start(client, message):
     user_id = message.from_user.id
 
@@ -78,7 +92,7 @@ def start(client, message):
         ])
     )
 
-@app.on_callback_query()
+@app_bot.on_callback_query()
 def callback_handler(client, query):
     user_id = query.from_user.id
 
@@ -97,7 +111,7 @@ def callback_handler(client, query):
                                 disable_web_page_preview=True)
 
     elif query.data == "buy_premium":
-      query.message.edit_text(
+        query.message.edit_text(
             "💎 Premium Plans:\n\n"
             "🔹 1 Day - $1\n"
             "🔹 1 Month - $5\n"
@@ -109,7 +123,7 @@ def callback_handler(client, query):
             ])
         )
 
-@app.on_message(filters.command("addpremium") & filters.user(ADMIN_ID))
+@app_bot.on_message(filters.command("addpremium") & filters.user(ADMIN_ID))
 def add_premium_command(client, message):
     try:
         args = message.text.split()
@@ -126,7 +140,7 @@ def add_premium_command(client, message):
     except Exception as e:
         message.reply_text(f"❌ Error: {str(e)}")
 
-@app.on_message(filters.text)
+@app_bot.on_message(filters.text)
 def download_video(client, message):
     user_id = message.from_user.id
     url = message.text.strip()
@@ -176,20 +190,7 @@ def download_video(client, message):
     else:
         message.reply_text("❌ Failed to fetch the video link!")
 
-# Run the bot
-app.run()
-
-
-
-import os
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "OK"
-
+# Run Flask and Pyrogram in Parallel
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # Use Koyeb's assigned port
-    app.run(host="0.0.0.0", port=port)
+    threading.Thread(target=run_flask).start()  # Start Flask in a separate thread
+    app_bot.run()  # Run Telegram bot in the main thread
