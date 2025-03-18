@@ -1,3 +1,4 @@
+aiohttp
 flask
 pyrogram
 tgcrypto
