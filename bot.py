@@ -8,11 +8,11 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Environment Variables
-API_ID = int(os.getenv("API_ID", "22349465"))  # Replace with your API ID
+API_ID = int(os.getenv("API_ID", "22349465"))  
 API_HASH = os.getenv("API_HASH", "3732e079c4125690226d8e7b4e028ca4")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8112458164:AAGGAawWetqBtJGDSUK05Bz6h0wArWCNnno")
-URL_SHORTENER = "https://indiaearnx.com/st?api=3ca9e6d453fa647f7dea5916f50519819919f62a"  # Replace with your URL shortener API
-ADMIN_ID = int(os.getenv("ADMIN_ID", "5469498838"))  # Replace with your Telegram user ID
+BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN")  
+URL_SHORTENER = "https://indiaearnx.com/st?api=YOUR_SHORTENER_API"  
+ADMIN_ID = int(os.getenv("ADMIN_ID", "5469498838"))  
 
 # Initialize Pyrogram Client
 app_bot = Client("TeraboxBot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -25,7 +25,7 @@ def home():
     return "OK"
 
 def run_flask():
-    port = int(os.getenv("PORT", 5000))
+    port = int(os.getenv("PORT", 5000))  
     flask_app.run(host="0.0.0.0", port=port)
 
 # User Tracking Database
@@ -35,10 +35,10 @@ premium_users = {}
 # Function to check if user is premium
 def is_premium(user_id):
     if user_id in premium_users:
-        if datetime.now() < premium_users[user_id]:  # Check expiry
+        if datetime.now() < premium_users[user_id]:  
             return True
         else:
-            del premium_users[user_id]  # Remove expired premium users
+            del premium_users[user_id]  
     return False
 
 # Function to add premium user
@@ -50,17 +50,33 @@ def add_premium(user_id, duration):
 # Function to extract direct video link from Terabox
 def get_terabox_video_link(url):
     headers = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(url, headers=headers)
+    try:
+        response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            print(f"❌ Failed to fetch page: {response.status_code}")
+            return None
 
-    if response.status_code == 200:
+        print(f"🔍 Terabox Page Fetched Successfully!\n{response.text[:500]}")  
+
+        # Extract direct video link (Update regex if needed)
         match = re.search(r'https://d\.terabox\.com/[^\s"]+', response.text)
         if match:
-            return match.group(0)  # Return direct video link
-    return None
+            direct_link = match.group(0)
+            print(f"✅ Extracted Direct Link: {direct_link}")  
+            return direct_link
+        else:
+            print("❌ No direct link found in the page.")
+            return None
+
+    except Exception as e:
+        print(f"⚠️ Error fetching Terabox link: {e}")
+        return None
 
 # Telegram Bot Handlers
 @app_bot.on_message(filters.command("start"))
 def start(client, message):
+    user_id = message.from_user.id
+
     message.reply_text(
         "👋 Welcome to Terabox Video Downloader Bot!\n\n"
         "⚡ Send me a Terabox link, and I'll fetch the direct download link for you.\n\n"
@@ -155,5 +171,5 @@ def download_video(client, message):
 
 # Run Flask and Pyrogram in Parallel
 if __name__ == "__main__":
-    threading.Thread(target=run_flask).start()  # Start Flask in a separate thread
-    app_bot.run()  # Run Telegram bot in the main thread
+    threading.Thread(target=run_flask).start()  
+    app_bot.run()
