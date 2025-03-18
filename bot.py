@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 API_ID = int(os.getenv("API_ID", "22349465"))  # Replace with your API ID
 API_HASH = os.getenv("API_HASH", "3732e079c4125690226d8e7b4e028ca4")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "8112458164:AAGGAawWetqBtJGDSUK05Bz6h0wArWCNnno")
-FSUB_CHANNEL = os.getenv("FSUB_CHANNEL", "@tj_bots")
+FSUB_CHANNEL = os.getenv("FSUB_CHANNEL", "tj_bots")
 URL_SHORTENER = "https://indiaearnx.com/st?api=3ca9e6d453fa647f7dea5916f50519819919f62a"  # Replace with your URL shortener API
 ADMIN_ID = int(os.getenv("ADMIN_ID", "5469498838"))  # Replace with your Telegram user ID
 
