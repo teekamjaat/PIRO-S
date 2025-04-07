@@ -175,11 +175,6 @@ async def get_settings(group_id):
     
 async def save_group_settings(group_id, key, value):
     current = await get_settings(group_id)
-
-    # Prevent overwriting existing settings
-    if key in current and current[key] is not None:
-        return  # Skip updating if the key already has a value
-
     current.update({key: value})
     temp.SETTINGS.update({group_id: current})
     await db.update_settings(group_id, current)
