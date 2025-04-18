@@ -537,22 +537,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text("<b>ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ</b>")
 
     elif query.data.startswith("send_all"):
-    ident, key = query.data.split("#")
+        ident, key = query.data.split("#")
 
-    if query.message.reply_to_message and query.message.reply_to_message.from_user:
-        user = query.message.reply_to_message.from_user.id
-    else:
-        return await query.answer("This action must be used by replying to a message.", show_alert=True)
+        if query.message.reply_to_message and query.message.reply_to_message.from_user:
+                user = query.message.reply_to_message.from_user.id
+        else:
+                return await query.answer("This action must be used by replying to a message.", show_alert=True)
 
-    if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer(f"Hello {query.from_user.first_name},\nDon't Click Other Results!", show_alert=True)
+        if int(user) != 0 and query.from_user.id != int(user):
+                return await query.answer(f"Hello {query.from_user.first_name},\nDon't Click Other Results!", show_alert=True)
 
-    files = temp.FILES_ID.get(key)
-    if not files:
-        await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-        return
+        files = temp.FILES_ID.get(key)
+        if not files:
+                await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+                return
 
-    await query.answer(url=f"https://t.me/{temp.U_NAME}?start=allfiles_{query.message.chat.id}_{key}")
+        await query.answer(url=f"https://t.me/{temp.U_NAME}?start=allfiles_{query.message.chat.id}_{key}")
 
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
