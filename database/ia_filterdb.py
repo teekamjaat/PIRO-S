@@ -15,7 +15,7 @@ instance = Instance.from_db(mydb)
 
 @instance.register
 class Media(Document):
-    _id = fields.StringField(required=True)
+    file_id = fields.StrField(attribute='_id')
     file_ref = fields.StrField(allow_none=True)
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
@@ -38,7 +38,7 @@ async def save_file(media):
     file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
     try:
         file = Media(
-            _id=file_id,
+            file_id=file_id,
             file_ref=file_ref,
             file_name=file_name,
             file_size=media.file_size,
@@ -112,7 +112,7 @@ async def get_bad_files(query, file_type=None, offset=0, filter=False):
     return files, total_results
     
 async def get_file_details(query):
-    filter = {'_id': query}
+    filter = {'file_id': query}
     cursor = Media.find(filter)
     filedetails = await cursor.to_list(length=1)
     return filedetails
@@ -147,3 +147,4 @@ def unpack_new_file_id(new_file_id):
     )
     file_ref = encode_file_ref(decoded.file_reference)
     return file_id, file_ref
+    
