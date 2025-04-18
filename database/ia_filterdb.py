@@ -15,7 +15,7 @@ instance = Instance.from_db(mydb)
 
 @instance.register
 class Media(Document):
-    file_id = fields.StrField(attribute='file_id', allow_none=True)
+    file_id = fields.StrField(attribute='_id')
     file_ref = fields.StrField(allow_none=True)
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
@@ -29,9 +29,11 @@ class Media(Document):
 
 async def get_files_db_size():
     return (await mydb.command("dbstats"))['dataSize']
-
+    
 async def save_file(media):
     """Save file in database"""
+
+    # TODO: Find better way to get same file_id for same media to avoid duplicates
     file_id, file_ref = unpack_new_file_id(media.file_id)
     file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
     try:
@@ -42,7 +44,7 @@ async def save_file(media):
             file_size=media.file_size,
             mime_type=media.mime_type,
             caption=media.caption.html if media.caption else None,
-            file_type=media.mime_type.split('/')[0] if media.mime_type else None
+            file_type=media.mime_type.split('/')[0]
         )
     except ValidationError:
         print('Error occurred while saving file in database')
@@ -50,8 +52,8 @@ async def save_file(media):
     else:
         try:
             await file.commit()
-        except DuplicateKeyError:
-            print(f'{getattr(media, "file_name", "NO_FILE")} is already saved in database')
+        except DuplicateKeyError:      
+            print(f'{getattr(media, "file_name", "NO_FILE")} is already saved in database') 
             return 'dup'
         else:
             print(f'{getattr(media, "file_name", "NO_FILE")} is saved to database')
@@ -64,7 +66,7 @@ async def get_search_results(query, max_results=MAX_BTN, offset=0, lang=None):
     elif ' ' not in query:
         raw_pattern = r'(\b|[\.\+\-_])' + query + r'(\b|[\.\+\-_])'
     else:
-        raw_pattern = query.replace(' ', r'.*[\s\.\+\-_]')
+        raw_pattern = query.replace(' ', r'.*[\s\.\+\-_]') 
     try:
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
@@ -85,9 +87,9 @@ async def get_search_results(query, max_results=MAX_BTN, offset=0, lang=None):
     total_results = await Media.count_documents(filter)
     next_offset = offset + max_results
     if next_offset >= total_results:
-        next_offset = ''
+        next_offset = ''       
     return files, next_offset, total_results
-
+    
 async def get_bad_files(query, file_type=None, offset=0, filter=False):
     query = query.strip()
     if not query:
@@ -108,7 +110,7 @@ async def get_bad_files(query, file_type=None, offset=0, filter=False):
     cursor.sort('$natural', -1)
     files = await cursor.to_list(length=total_results)
     return files, total_results
-
+    
 async def get_file_details(query):
     filter = {'file_id': query}
     cursor = Media.find(filter)
