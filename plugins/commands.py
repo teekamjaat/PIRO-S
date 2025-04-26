@@ -82,7 +82,8 @@ async def start(client:Client, message):
             InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
-            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1')
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+KTS_HyvjdGIyZTk1')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -110,7 +111,8 @@ async def start(client:Client, message):
             InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
-            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1')
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+KTS_HyvjdGIyZTk1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
