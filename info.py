@@ -25,7 +25,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001983152794 -1001756564118 -1002369988753').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002369988753').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://teekam1:teekam@ipopcornbot.uszc1z1.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Teekam1:teekam@ipopcornbot1.4pteojl.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot1")
 DATABASE_NAME = environ.get('DATABASE_NAME', "tjbot")
