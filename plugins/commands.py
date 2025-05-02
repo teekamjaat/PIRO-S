@@ -83,7 +83,7 @@ async def start(client:Client, message):
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
-            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+KTS_HyvjdGIyZTk1')
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+6V41vuee9O5hMTc9')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -112,7 +112,7 @@ async def start(client:Client, message):
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
-            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+KTS_HyvjdGIyZTk1')
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+6V41vuee9O5hMTc9')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
