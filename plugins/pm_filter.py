@@ -31,7 +31,7 @@ async def pm_search(client, message):
     if PM_SEARCH:
         await auto_filter(client, message)  
     else:
-        await message.reply_text("➜ ⚠️ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ ғʀᴏᴍ ʜᴇʀ\n➜ sᴇᴀʀᴄʜ 🔍 ᴍᴏᴠɪᴇ ɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ\n\nhttps://t.me/+ibNBk442JatkNThl\nhttps://t.me/+ibNBk442JatkNThl")
+        await message.reply_text("➜ ⚠️ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ ғʀᴏᴍ ʜᴇʀ\n➜ sᴇᴀʀᴄʜ 🔍 ᴍᴏᴠɪᴇ ɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ\n\nhttps://t.me/+5yfKFrboKCMzYWQ9\nhttps://t.me/+5yfKFrboKCMzYWQ9")
     
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def group_search(client, message):
