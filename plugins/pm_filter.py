@@ -31,7 +31,7 @@ async def pm_search(client, message):
     if PM_SEARCH:
         await auto_filter(client, message)  
     else:
-        await message.reply_text("➜ ⚠️ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ ғʀᴏᴍ ʜᴇʀ\n➜ sᴇᴀʀᴄʜ 🔍 ᴍᴏᴠɪᴇ ɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ\n\nhttps://t.me/+siIP7Jook-xiYThl\nhttps://t.me/+siIP7Jook-xiYThl")
+        await message.reply_text("➜ ⚠️ This Bot is Ban Use New Bot ‼️\n\nhttps://t.me/iPopkornbot_1bot\nhttps://t.me/iPopkornbot_1bot")
     
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def group_search(client, message):
