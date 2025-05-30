@@ -138,7 +138,9 @@ async def start(client:Client, message):
                 ],[
             InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʀɪᴄᴋᴇᴛ ᴘʀᴇᴅɪᴄᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+lmirDxYPD05mZDc1')
         ],[
-            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+5yfKFrboKCMzYWQ9')
+            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url='https://t.me/+5yfKFrboKCMzYWQ9')
+        ],[
+            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɪɴᴅɪᴀᴇᴀʀɴx ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+Ek5vC-xkcvljNTc1')
         ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
