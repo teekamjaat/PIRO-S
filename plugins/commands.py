@@ -136,11 +136,9 @@ async def start(client:Client, message):
         btn = [[
                 InlineKeyboardButton("⛔️ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ⛔️", url=invite_link.invite_link)
                 ],[
-            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʀɪᴄᴋᴇᴛ ᴘʀᴇᴅɪᴄᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+lmirDxYPD05mZDc1')
+            InlineKeyboardButton("⛔️ ᴊᴏɪɴ  ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+nhX_Ja7Oa9BjMzM9')
         ],[
-            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url='https://t.me/+5yfKFrboKCMzYWQ9')
-        ],[
-            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɪɴᴅɪᴀᴇᴀʀɴx ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+Ek5vC-xkcvljNTc1')
+            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+5yfKFrboKCMzYWQ9')
         ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
