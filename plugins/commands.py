@@ -77,7 +77,7 @@ async def start(client:Client, message):
         await client.send_message(LOG_CHANNEL, script.NEW_USER_TXT.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
+            InlineKeyboard('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
             InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
@@ -106,7 +106,7 @@ async def start(client:Client, message):
             )
             return
         buttons = [[
-            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
+            InlineKeyboard('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
             InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
