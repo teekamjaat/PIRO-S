@@ -23,7 +23,7 @@ API_ID = int(environ.get('API_ID', '22349465'))
 API_HASH = environ.get('API_HASH', '3732e079c4125690226d8e7b4e028ca4')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5371238852 5469498838').split()]
-USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
+USERNAME = environ.get('USERNAME', 'https://t.me/Master_xkid')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002725803259'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002046685711 -1002369988753').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Rajesh:Rajeah@rajesh.4m2jrxj.mongodb.net/?retryWrites=true&w=majority&appName=Rajesh")
