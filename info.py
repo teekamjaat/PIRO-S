@@ -40,9 +40,9 @@ URL = environ.get('URL', '')
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002725803259'))
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_Movie_Video/7")
-TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/How_To_Download_Movie_Video/7")
-TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/Tutorial01Ask/16")
+TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/Tutorial01Ask/16")
+TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/Tutorial01Ask/16")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/45a270fc6a0a1c183c614.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "d7402596e28dac0ba41870ad368f9ac391b90e98")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "indiaearnx.com")
@@ -56,7 +56,7 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "3600"))
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002271270750')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002633073907')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002001530907'))
 
