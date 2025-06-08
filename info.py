@@ -24,22 +24,22 @@ API_HASH = environ.get('API_HASH', '3732e079c4125690226d8e7b4e028ca4')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5371238852 5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002725803259'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002046685711 -1002369988753').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://teekam1:teekam@ipopcornbot.uszc1z1.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Teekam1:teekam@ipopcornbot1.4pteojl.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot1")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Rajesh:Rajeah@rajesh.4m2jrxj.mongodb.net/?retryWrites=true&w=majority&appName=Rajesh")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Rajeah:Rajeah@rajesh2.2oma8nb.mongodb.net/?retryWrites=true&w=majority&appName=Rajesh2")
 DATABASE_NAME = environ.get('DATABASE_NAME', "tjbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'tjbotdatabase')
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001786924542'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002725803259'))
 QR_CODE = environ.get('QR_CODE', 'https://envs.sh/nbi.jpg')
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001786924542'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002725803259'))
 URL = environ.get('URL', '')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001786924542'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002725803259'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7")
@@ -56,7 +56,7 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "3600"))
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002273359017')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002633073907')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002001530907'))
 
