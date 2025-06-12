@@ -36,7 +36,10 @@ class temp(object):
     GROUPS_CANCEL = False    
     CHAT = {}
 
-async def is_subscribed(bot, user_id, channel_id):
+async def is_subscribed(bot, user_id, channel_id): 
+
+    if await db.find_join_req(user_id, channel_id):
+        return True 
     try:
         user = await bot.get_chat_member(channel_id, user_id)
     except UserNotParticipant:
