@@ -5,8 +5,9 @@ from info import ADMINS, AUTH_CHANNEL
 
 @Client.on_chat_join_request((filters.group | filters.channel))
 async def autoapprove(client: Client, message: ChatJoinRequest):
-  if not await db.find_join_req(message.from_user.id):
-    await db.add_join_req(message.from_user.id)
+    if not await db.find_join_req(message.from_user.id, message.chat.id):
+        await db.add_join_req(message.from_user.id, message.chat.id)
+
 
 @Client.on_message(filters.command("delreq") & filters.private & filters.user(ADMINS))
 async def del_requests(client, message):
