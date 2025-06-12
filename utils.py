@@ -36,18 +36,16 @@ class temp(object):
     GROUPS_CANCEL = False    
     CHAT = {}
 
-async def is_subscribed(bot, user_id, channel_id):
+async def is_subscribed(bot, user_id, chat_id):
     try:
-        user = await bot.get_chat_member(channel_id, user_id)
+        user = await bot.get_chat_member(chat_id, user_id)
+        return user.status != enums.ChatMemberStatus.BANNED
     except UserNotParticipant:
-        pass
-    except Exception as e:
-        pass
-    else:
-        if user.status != enums.ChatMemberStatus.BANNED:
-            return True
-    return False
- 
+        return False
+    except Exception:
+        return False
+     
+
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
         query = (query.strip()).lower()
