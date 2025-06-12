@@ -58,6 +58,10 @@ LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
 auth_channel = environ.get('AUTH_CHANNEL', '-1002273359017')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+
+group_id = environ.get('GROUP_ID', '0')
+GROUP_ID = int(group_id) if group_id and id_pattern.match(group_id) else None
+
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002001530907'))
 
 # bot settings
