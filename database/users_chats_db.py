@@ -56,12 +56,15 @@ class Database:
             return chat.get('settings', self.default)
         return self.default
 
-    async def find_join_req(self, id):
-        return bool(await self.req.find_one({'id': id}))
-        
-    async def add_join_req(self, id):
-        await self.req.insert_one({'id': id})
+    # Check if join request exists for given user_id and chat_id
+    async def find_join_req(self, user_id, chat_id):
+        return bool(await self.req.find_one({'user_id': user_id, 'chat_id': chat_id}))
 
+    # Add a new join request with user_id and chat_id
+    async def add_join_req(self, user_id, chat_id):
+        await self.req.insert_one({'user_id': user_id, 'chat_id': chat_id})
+
+    # Delete all join requests 
     async def del_join_req(self):
         await self.req.drop()
 
