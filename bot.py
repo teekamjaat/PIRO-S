@@ -101,18 +101,4 @@ class Bot(Client):
                 current += 1
 
 app = Bot()
-
-# ⬇️ Add this START command handler below
-from pyrogram import filters
-from pyrogram.types import Message
-
-@app.on_message(filters.command("start") & filters.private)
-async def custom_start(client, message: Message):
-    args = message.text.split()
-    if len(args) > 1 and args[1] == "hello":
-        await message.reply_text("👋 come from the special link!")
-    else:
-        await message.reply_text("Hello! How can I help you?")
-
-# ⬇️ Don't remove this line
 app.run()
