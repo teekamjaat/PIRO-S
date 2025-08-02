@@ -79,7 +79,7 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
+            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH7OMs0ODRl'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
