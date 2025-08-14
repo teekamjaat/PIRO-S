@@ -83,7 +83,7 @@ async def start(client:Client, message):
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
-            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+siIP7Jook-xiYThl')
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+9nS_9RH7OMs0ODRl')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -108,11 +108,11 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/teekam_jaat'),
+            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH7OMs0ODRl'),
             InlineKeyboardButton('💎 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1'),
-            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+siIP7Jook-xiYThl')
+            InlineKeyboardButton('🎥 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url='https://t.me/+9nS_9RH7OMs0ODRl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -137,6 +137,8 @@ async def start(client:Client, message):
                 InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url=invite_link.invite_link)
                 ],[
             InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 2 ⛔️", url='https://t.me/+EeMILv62tKBjZjA1')
+        ],[
+            InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 2 ⛔️", url='https://t.me/+9nS_9RH7OMs0ODRl')
         ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
