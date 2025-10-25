@@ -134,11 +134,11 @@ async def start(client:Client, message):
     if settings.get('fsub_id', AUTH_CHANNEL) and not await is_subscribed(client, message.from_user.id, channel):
         invite_link = await client.create_chat_invite_link(channel, creates_join_request=True)
         btn = [[
-                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url=invite_link.invite_link)
+                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ⛔️", url=invite_link.invite_link)
                 ],[
-                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+PrmGkaL_FXVjZDg1')
+                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url='https://t.me/+PrmGkaL_FXVjZDg1')
               ],[
-                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+0hXpTzLijBcxNjc9')
+                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 2 ⛔️", url='https://t.me/+bdOuyhoo6OFiNmE1')
         ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
