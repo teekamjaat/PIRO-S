@@ -21,13 +21,13 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '22349465'))
 API_HASH = environ.get('API_HASH', '3732e079c4125690226d8e7b4e028ca4')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8456021538:AAGZaVLHrqz_jOcJ7yrflXLlfIH2Ox_A8Oo')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5469498838').split()]
 USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002046685711 -1002369988753').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://teekam1:teekam@ipopcornbot.uszc1z1.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Teekam1:teekam@ipopcornbot1.4pteojl.mongodb.net/?retryWrites=true&w=majority&appName=Ipopcornbot1")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Teekam:9571404334@cluster0.pokkc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://teekam9079:teekam@teekam.cludf.mongodb.net/?retryWrites=true&w=majority&appName=Teekam")
 DATABASE_NAME = environ.get('DATABASE_NAME', "tjbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'tjbotdatabase')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001786924542'))
