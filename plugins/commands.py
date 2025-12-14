@@ -79,8 +79,8 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH7OMs0ODRl'),
-            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1')
+            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH70ODRl'),
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+bos5mKdlYTM1')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -105,8 +105,8 @@ async def start(client:Client, message):
         buttons = [[
             InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH7OMs0ODRl'),
-            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+boakQes5mKdlYTM1')
+            InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/+9nS_9RH70ODRl'),
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+bos5mKdlYTM1')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -128,7 +128,7 @@ async def start(client:Client, message):
     if settings.get('fsub_id', AUTH_CHANNEL) and not await is_subscribed(client, message.from_user.id, channel):
         invite_link = await client.create_chat_invite_link(channel, creates_join_request=True)
         btn = [[
-                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+5SByNVmMDGsyNTA1')
+                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ⛔️", url=invite_link.invite_link)
                 ]]
         if message.command[1] != "subscribe":
             btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
