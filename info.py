@@ -21,25 +21,25 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '22349465'))
 API_HASH = environ.get('API_HASH', '3732e079c4125690226d8e7b4e028ca4')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8456021538:AAGFtLOTI_fswQ4hAXuLbjVhkgDj5dFqWgc')
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5469498838').split()]
-USERNAME = environ.get('USERNAME', 'https://telegram.me/teekam_jaat')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001786924542'))
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002046685711 -1002369988753').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Teekam:9571404334@cluster0.pokkc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Teekam:9571404334@cluster0.pokkc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+BOT_TOKEN = environ.get('BOT_TOKEN', '8293112239:AAHwUpRb2q2p_yJPDiA14LgXGIhaijjUcqA')
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6980266497').split()]
+USERNAME = environ.get('USERNAME', 'https://telegram.me/ayynn')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002515430650'))
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002515430650').split()]
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://danishansarirecaptcha_db_user:7KahFVPTplzazwqK@cluster0.rzcgn69.mongodb.net/?appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://danishansarirecaptcha_db_user:7KahFVPTplzazwqK@cluster0.rzcgn69.mongodb.net/?appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "tjbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'tjbotdatabase')
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001786924542'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002515430650'))
 QR_CODE = environ.get('QR_CODE', 'https://envs.sh/7ch.jpg')
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001786924542'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002515430650'))
 URL = environ.get('URL', '')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001786924542'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002515430650'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/How_To_Download_Movie_Video/7")
 TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/How_To_Download_Movie_Video/7")
@@ -56,9 +56,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "3600"))
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002232691074')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002515430650')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002001530907'))
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1003655618450'))
 
 # bot settings
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
