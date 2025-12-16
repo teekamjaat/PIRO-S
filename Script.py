@@ -16,7 +16,7 @@ Here You Can Request Movie's, Just Sent Movie OR WebSeries Name With Proper Goog
     STATUS_TXT = """<b><u>🗃 ᴅᴀᴛᴀʙᴀsᴇ 1 🗃</u>
 
 » ᴛᴏᴛᴀʟ ᴜsᴇʀs - <code>930{}</code>
-» ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘs - <code>71{}</code>
+» ᴛᴏᴛᴀʟ ɢʀᴏᴜᴘs - <code>3{}</code>
 » ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ - <code>{} / {}</code>
 
 <u>🗳 ᴅᴀᴛᴀʙᴀsᴇ 2 🗳</u></b>
