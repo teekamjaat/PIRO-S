@@ -134,7 +134,7 @@ async def start(client:Client, message):
     if settings.get('fsub_id', AUTH_CHANNEL) and not await is_subscribed(client, message.from_user.id, channel):
         invite_link = await client.create_chat_invite_link(channel, creates_join_request=True)
         btn = [[
-                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ⛔️", url='https://t.me/+eOHA7A5L2fMyN2I1')
+                InlineKeyboardButton("⛔️ ᴊᴏɪɴ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ⛔️", url=invite_link.invite_link)
                 ],[
                 InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url='https://t.me/+BBDBPgUvqHBlMGNl')
               ],[
