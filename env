@@ -1,15 +1,15 @@
 # Copy this to Railway environment variables
 # Go to Railway → Your Project → Variables → Add these
 
-BOT_TOKEN=7891234567:AAHfiqksDK2nJHxxxxxxxx
+BOT_TOKEN=8532135669:AAH2uizTRL59WDwZpOGLDLxFTiFy3TAxJvA
 DB_HOST=localhost
 DB_NAME=u323305058_movie
 DB_USER=u323305058_movie
-DB_PASS=YOUR_DB_PASSWORD
+DB_PASS=Teekam7877
 TMDB_API_KEY=0a88081143284fa351c9deec774e1438
-PUBLIC_CHANNEL=@YourMovieChannel
-STORAGE_CHANNEL=@YourStorageChannel
+PUBLIC_CHANNEL=@jaatmovie88
+STORAGE_CHANNEL=@jaatmovie88
 SITE_URL=https://movie.watchadearnmoney.online
-ADMIN_IDS=YOUR_TELEGRAM_ID
+ADMIN_IDS=5469498838
 VERIFY_HOURS=24
-SHORTENER_URL=
+SHORTENER_URL=indiaernx.com
