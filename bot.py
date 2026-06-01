@@ -29,7 +29,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ── CONFIG ──────────────────────────────────────────────────────
 BOT_TOKEN        = os.getenv('BOT_TOKEN',        '8532135669:AAH2uizTRL59WDwZpOGLDLxFTiFy3TAxJvA')
-DB_HOST          = os.getenv('DB_HOST',          'localhost')
+DB_HOST          = os.getenv('DB_HOST',          'srv1234.hostinger.com')
 DB_NAME          = os.getenv('DB_NAME',          'u323305058_movie')
 DB_USER          = os.getenv('DB_USER',          'u323305058_movie')
 DB_PASS          = os.getenv('DB_PASS',          'Tekam7877')
