@@ -28,17 +28,17 @@ from datetime import datetime, timedelta
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ── CONFIG ──────────────────────────────────────────────────────
-BOT_TOKEN        = os.getenv('BOT_TOKEN',        'YOUR_BOT_TOKEN')
+BOT_TOKEN        = os.getenv('BOT_TOKEN',        '8532135669:AAH2uizTRL59WDwZpOGLDLxFTiFy3TAxJvA')
 DB_HOST          = os.getenv('DB_HOST',          'localhost')
 DB_NAME          = os.getenv('DB_NAME',          'u323305058_movie')
 DB_USER          = os.getenv('DB_USER',          'u323305058_movie')
-DB_PASS          = os.getenv('DB_PASS',          'YOUR_DB_PASSWORD')
+DB_PASS          = os.getenv('DB_PASS',          'Tekam7877')
 TMDB_API_KEY     = os.getenv('TMDB_API_KEY',     '0a88081143284fa351c9deec774e1438')
-PUBLIC_CHANNEL   = os.getenv('PUBLIC_CHANNEL',   '@YourMovieChannel')   # announcement
-STORAGE_CHANNEL  = os.getenv('STORAGE_CHANNEL',  '@YourStorageChannel') # where you upload files
+PUBLIC_CHANNEL   = os.getenv('PUBLIC_CHANNEL',   '@jaatmovie88')   # announcement
+STORAGE_CHANNEL  = os.getenv('STORAGE_CHANNEL',  '@jaatmovie88') # where you upload files
 SITE_URL         = os.getenv('SITE_URL',         'https://movie.watchadearnmoney.online')
-SHORTENER_URL    = os.getenv('SHORTENER_URL',    '')  # your shortlink base URL
-ADMIN_IDS        = [int(x) for x in os.getenv('ADMIN_IDS', '123456789').split(',')]
+SHORTENER_URL    = os.getenv('SHORTENER_URL',    'indiaernx.com')  # your shortlink base URL
+ADMIN_IDS        = [int(x) for x in os.getenv('ADMIN_IDS', '5469498838').split(',')]
 VERIFY_HOURS     = int(os.getenv('VERIFY_HOURS', '24'))
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode='HTML')
