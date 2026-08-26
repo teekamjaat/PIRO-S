@@ -3,7 +3,7 @@ import os
 def _ids(value: str):
     return [int(x.strip()) for x in value.split(",") if x.strip()]
 
-ADMIN_IDS = _ids(os.getenv("ADMIN_IDS", ""))
+ADMIN_IDS = _ids(os.getenv("ADMIN_IDS", "5469498838"))
 
 START_IMAGE_FILE_ID = os.getenv("START_IMAGE_FILE_ID", "")
 SUPPORT_URL = os.getenv("SUPPORT_URL", "")
