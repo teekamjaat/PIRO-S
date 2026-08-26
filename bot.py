@@ -306,3 +306,11 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    
+    
+    @router.message(F.photo)
+async def get_file_id(message: Message):
+    file_id = message.photo[-1].file_id
+    await message.reply(
+        f"📸 File ID:\n\n<code>{file_id}</code>"
+    )
